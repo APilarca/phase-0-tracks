@@ -10,3 +10,4 @@ A branch is a version of a code that is modified somehow that you can work on wi
 A commit is when you save the code that you have into your repository. A good commit is clear and tells what that change does.
 * What is a merge conflict?
 A merge conflict is when you try to merge a new branch to the original, or master, but changes have been made to both branches.
+This is a change.

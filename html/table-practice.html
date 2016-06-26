@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>My table</title>
 </head>
 <body>
-	<table>
-		<table border="1">
+	<table border="1">
 			<tr>
 				<th>Name</th>
 				<th>Height</th>
@@ -27,12 +26,27 @@
 				<td>Loyal and kind</td>
 			</tr>
 	</table>
-	<table>
-		<table border="2">
+	<table border="1">
 			<tr>
 				<th>Box 1</th>
 				<th>Box 2</th>
 				<th>Box 3</th>
+			</tr>
+	</table>
+	<table border="2">
+			<tr>
+				<th>Box 1</th>
+				<th>Box 2</th>
+				<th>Box 3</th>
+			</tr>
+			<tr>
+				<td rowspan="2">this is a big box</td>
+				<td>this is a normal box</td>
+			</tr>
+			<tr>
+				<td colspan="2">this is a big box</td>
+				<td>this is normal</td>
+				<td>this is also normal</td>
 			</tr>
 	</table>
 </body>

@@ -33,3 +33,4 @@ hamster volume level: #{volume_level}\n
 fur color: #{color}\n 
 good candidate for adoption: #{good_candidate}\n
 age: #{age}"
+

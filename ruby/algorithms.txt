@@ -1,0 +1,33 @@
+Algorithm for using an elevator
+-Press button to call elevator
+-Walk inside elevator once the doors have opened
+-Go to buttons with floor numbers located inside the elevator
+-Push corresponding button with floor number that you wish to go to
+-Wait until the elevator indicates that your floor has been reached
+-Exit elevator once elevator doors open
+
+Algorithm for Getting up and ready for work in the morning
+-Wake up to first alarm
+	-complete all challenges required to turn off alarm
+	-hit snooze on alarm
+	-complete all challenges again to turn off alarm
+	-hit snooze again on alarm
+	-complete all challenges again to turn off alarm
+	repeat until able to walk
+-Get out of bed
+-Walk into next room and fall asleep again
+-Wake up to second more forgiving alarm
+	-hit snooze
+	-wake up again to second alarm
+	-repeat until only 10 minutes left to get ready
+-Get up from second sleeping spot
+-Walk to bathroom
+-Brush teeth
+-Wash face
+-Turn on light
+-Put on make-up
+-Put on work clothes
+-Walk to door
+-If keys/phone are forgotten, walk back up to room
+-Enter car
+-Drive to work

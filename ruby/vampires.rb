@@ -34,3 +34,17 @@ if insurance = "y"
 else
 	insurance = false
 end
+
+result = ""
+if age = true && (garlic = true || insurance = true)
+	result = "Probably not a vampire"
+elsif age = false && (garlic = false || insurance = false)
+	result = "Probably a vampire"
+elsif age = false && garlic = false && insurance = false
+	result = "Almost certainly a vampire"
+elsif name = "Drake Cula" || "Tu Fang"
+	result = "Definitely a Vampire"
+else
+	result = "Results inconclusive"
+end
+puts result

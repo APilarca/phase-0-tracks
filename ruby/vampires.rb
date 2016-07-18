@@ -17,7 +17,7 @@ insurance = gets.chomp
 #EVEN THOUGH passes if name = "Drake Cula" or "Tu Fang" = Definitely
 #Otherwise "Results inconclusive"
 
-if 2016 - birth_year = age || age - 1
+if 2016 - birth_year == (age || age - 1)
 	age = true
 else
 	age = false
@@ -29,22 +29,33 @@ else
 	garlic = false
 end
 
-if insurance = "y"
+if insurance == "y"
 	insurance = true
 else
 	insurance = false
 end
+puts name
+puts age
+puts birth_year
+puts garlic
+puts insurance
+
 
 result = ""
-if age = true && (garlic = true || insurance = true)
+if age == true && (garlic == true || insurance == true)
 	result = "Probably not a vampire"
-elsif age = false && (garlic = false || insurance = false)
+end
+if age == false && (garlic == false || insurance == false)
 	result = "Probably a vampire"
-elsif age = false && garlic = false && insurance = false
+end
+if age == false && garlic == false && insurance == false
 	result = "Almost certainly a vampire"
-elsif name = "Drake Cula" || "Tu Fang"
+end
+if name == ("Drake Cula" || "Tu Fang")
 	result = "Definitely a Vampire"
-else
+end
+if result == ""
 	result = "Results inconclusive"
+else result = result
 end
 puts result

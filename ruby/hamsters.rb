@@ -32,5 +32,4 @@ puts "name of hamster: #{hamster_name}\n
 hamster volume level: #{volume_level}\n 
 fur color: #{color}\n 
 good candidate for adoption: #{good_candidate}\n
-age: #{age}"
-
+age: #{ag

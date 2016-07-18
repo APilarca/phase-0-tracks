@@ -34,3 +34,18 @@ def decrypt(input)
     end
     puts "Your password is #{new_password}."
 end
+
+puts "Hello secret agent, would you like to encrypt or decrypt today?"
+decision = gets.chomp
+
+if decision == "encrypt"
+    puts "Please enter password you would like to encrypt"
+    password = gets.chomp
+    encrypt(password)
+elsif decision == "decrypt"
+    puts "Please enter password you would like to decrypt"
+    password = gets.chomp
+    decrypt(password)
+else 
+    puts "Please re-enter"
+    end

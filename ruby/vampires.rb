@@ -2,6 +2,8 @@
 puts "How many users will be surveyed today?"
 users = gets.chomp.to_i
 i = 0
+allergies = ""
+result = ""
 while i < users do
 	puts "What is your name?"
 	name = gets.chomp
@@ -13,6 +15,15 @@ while i < users do
 	garlic = gets.chomp
 	puts "Would you like to enroll in the company health insurance(y/n)?"
 	insurance = gets.chomp
+	until allergies == ("done") do
+		puts "Do you have any allergies? Please enter one at a time, and type done when finished"
+		allergies = gets.chomp
+		if allergies == "sunshine"
+			break
+		end
+
+	end
+	
 	
 	
 	# if age is correct 
@@ -39,21 +50,21 @@ while i < users do
 	else
 		insurance = false
 	end
+	'''
 	puts name
 	puts age
 	puts birth_year
 	puts garlic
 	puts insurance
+	'''
 	
-	
-	result = ""
 	if age == true && (garlic == true || insurance == true)
 		result = "Probably not a vampire"
 	end
-	if age == false && (garlic == false || insurance == false)
+	if age != true && (garlic == false || insurance == false)
 		result = "Probably a vampire"
 	end
-	if age == false && garlic == false && insurance == false
+	if age != true && garlic == false && insurance == false
 		result = "Almost certainly a vampire"
 	end
 	if name == ("Drake Cula" || "Tu Fang")
@@ -63,7 +74,10 @@ while i < users do
 		result = "Results inconclusive"
 	else result = result
 	end
+	if allergies = "sunshine"
+		result = "Definitely a vampire"
+	end
 	puts result
 	i+=1
 end
-	
+puts "Actually, nevermind! What do these questions have to do with anything? Let's all be friends."

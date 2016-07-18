@@ -74,7 +74,7 @@ while i < users do
 		result = "Results inconclusive"
 	else result = result
 	end
-	if allergies = "sunshine"
+	if allergies == "sunshine"
 		result = "Definitely a vampire"
 	end
 	puts result

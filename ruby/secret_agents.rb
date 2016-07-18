@@ -25,3 +25,5 @@ input = "abc"
     end
     puts "Your encrypted password is #{new_password}."
 end
+
+encrypt(decrypt(swordfish))

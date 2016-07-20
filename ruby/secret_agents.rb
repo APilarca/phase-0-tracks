@@ -28,6 +28,8 @@ def encrypt(input)
 end
 
 
+
+
 def decrypt(input)
     new_value = 0
     new_password = ""

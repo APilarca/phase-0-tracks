@@ -3,12 +3,12 @@
 #convert data to appropriate type
 
 
-interior_design {
-	client_name: ,
-	age: ,
-	children: ,
-	theme: ,
-	time_allowed:
+interior_design = {
+	:client_name=> "",
+	:age=>"" ,
+	:children=>"" ,
+	:theme=>"" ,
+	:time_allowed=>""
 }
 
 puts "Please enter your full name: "

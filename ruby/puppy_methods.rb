@@ -33,3 +33,27 @@ sprinkles.speak(3)
 sprinkles.roll_over
 sprinkles.dog_years(3)
 sprinkles.play_dead
+class Bird
+  def initialize
+    puts "initializing your bird"
+  end
+  
+  def tweet
+    puts "tweet tweet"
+  end
+  
+  def fly
+    puts "The bird flaps it's wings"
+  end
+end
+
+bird_chain = []
+
+50.times do
+  bird_chain.push(Bird.new)
+end
+
+bird_chain.each do |bird|
+  bird.tweet
+  bird.fly
+end

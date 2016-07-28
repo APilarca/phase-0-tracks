@@ -28,9 +28,10 @@ nick.speak
 nick.eat_milk_and_cookies("chocolate chip")
 '''
 # driver code wto create diverse santas
-
+#empty array created to log santas into
 santas = []
 
+#arrays with random genders and ethnicities to assign to new santas
 ran_gender = ["gender fluid", "intersex", "genderqueer", "trans woman", "other"]
 ran_ethnicity = ["white", "black", "chinese", "korean", "other"]
 
@@ -38,6 +39,8 @@ ran_ethnicity = ["white", "black", "chinese", "korean", "other"]
 eric = Santa.new("cis","asian")
 p eric
 '''
+#loop that creates a new instance of santa for every type of
+#ethnicity provided in ran_ethnicity array
 ran_ethnicity.length.times do |i|
 	santas << Santa.new( ran_gender[i], ran_ethnicity[i] )
 	p santas.to_ary

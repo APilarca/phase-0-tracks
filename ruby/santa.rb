@@ -18,4 +18,4 @@ end
 #driver code to test class methods
 nick = Santa.new
 nick.speak
-nick.eat_milk_and_cookies("snickerdoodle")
+nick.eat_milk_and_cookies("chocolate chip")

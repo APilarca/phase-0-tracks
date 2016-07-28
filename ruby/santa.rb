@@ -46,3 +46,4 @@ ran_ethnicity.length.times do |i|
 	p santas.to_ary
 end
 
+#continue on setter and getter video

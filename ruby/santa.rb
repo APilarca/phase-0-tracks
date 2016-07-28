@@ -1,7 +1,13 @@
 class Santa
+	
+
 	#prints message when new isntance of santa
 	#is created
-	def initialize
+	def initialize(gender, ethnicity)
+		@gender = gender
+		@ethnicity = ethnicity
+		@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer","Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+		@age = 0
 		puts "Initializing Santa instance..."
 	end
 	#enables out santa to spread holiday cheer
@@ -19,3 +25,4 @@ end
 nick = Santa.new
 nick.speak
 nick.eat_milk_and_cookies("chocolate chip")
+

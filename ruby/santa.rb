@@ -22,7 +22,24 @@ class Santa
 end
 
 #driver code to test class methods
+'''
 nick = Santa.new
 nick.speak
 nick.eat_milk_and_cookies("chocolate chip")
+'''
+# driver code wto create diverse santas
+
+santas = []
+
+ran_gender = ["gender fluid", "intersex", "genderqueer", "trans woman", "other"]
+ran_ethnicity = ["white", "black", "chinese", "korean", "other"]
+
+'''
+eric = Santa.new("cis","asian")
+p eric
+'''
+ran_ethnicity.length.times do |i|
+	santas << Santa.new( ran_gender[i], ran_ethnicity[i] )
+	p santas.to_ary
+end
 

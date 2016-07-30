@@ -19,6 +19,18 @@ class Santa
 	def eat_milk_and_cookies(cookie_type)
 		puts "That was a good #{cookie_type}!"
 	end
+	#age santa by ine year
+	def celebrate_birthday
+		@age = @age + 1
+		p @age
+	end
+	def get_mad_at(reindeer_name)
+
+	end
+	def gender=(new_gender)
+		@gender = new_gender
+	end
+
 end
 
 #driver code to test class methods
@@ -27,23 +39,22 @@ nick = Santa.new
 nick.speak
 nick.eat_milk_and_cookies("chocolate chip")
 '''
-# driver code wto create diverse santas
+'''
+# driver code to create diverse santas
 #empty array created to log santas into
 santas = []
-
 #arrays with random genders and ethnicities to assign to new santas
 ran_gender = ["gender fluid", "intersex", "genderqueer", "trans woman", "other"]
 ran_ethnicity = ["white", "black", "chinese", "korean", "other"]
 
-'''
-eric = Santa.new("cis","asian")
-p eric
-'''
+eric = Santa.new("cis", "asian")
+eric.celebrate_birthday
+
 #loop that creates a new instance of santa for every type of
 #ethnicity provided in ran_ethnicity array
+
 ran_ethnicity.length.times do |i|
 	santas << Santa.new( ran_gender[i], ran_ethnicity[i] )
 	p santas.to_ary
 end
-
-#continue on setter and getter video
+'''

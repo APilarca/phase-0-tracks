@@ -55,7 +55,19 @@ def remove_item(item)
 	p $grocery_list
 end
 
+def update_quantity(item, quantity)
+	$grocery_list[item] = quantity
+	p $grocery_list
+end
+
+def print_pretty
+	p "Don't forget these items! : "
+	$grocery_list.each {|item, quantity|
+	puts "You need #{quantity} #{item}"}
+end
 create_list("carrots apples oranges")
 add_item("tomatoes", 5)
 remove_item("potatoes")
+update_quantity("carrots", 3)
+print_pretty
 

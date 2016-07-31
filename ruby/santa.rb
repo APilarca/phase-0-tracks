@@ -1,5 +1,6 @@
 class Santa
-	
+attr_accessor :gender
+attr_reader :age :ethnicity
 
 	#prints message when new isntance of santa
 	#is created
@@ -29,6 +30,8 @@ class Santa
 		@reindeer_ranking.insert(-1,@reindeer_ranking.delete_at(i))
 
 	end
+#setter and getter methods long hand before using syntactic sugar
+'''
 	def gender=(new_gender)
 		@gender = new_gender
 	end
@@ -38,7 +41,7 @@ class Santa
 	def ethnicity
 		@ethnicity
 	end
-
+'''
 end
 
 #driver code to test class methods

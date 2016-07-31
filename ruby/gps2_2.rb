@@ -36,16 +36,38 @@
 
 
 
+$grocery_list = {}
 def create_list(items)
-	grocery_list = {}
 	items = items.split(" ")
 	items.each do |item|
-		grocery_list => {"#{item}" => 1}
-		p grocery_list
+		$grocery_list[item] = 1
 	end
-	p grocery_list
-	p grocery_list.class
+	p $grocery_list.keys
 end
 
+def add_item(item, quantity)
+	$grocery_list[item] = quantity
+	p $grocery_list	
+end
+
+def remove_item(item)
+	$grocery_list.delete(item)
+	p $grocery_list
+end
+
+def update_quantity(item, quantity)
+	$grocery_list[item] = quantity
+	p $grocery_list
+end
+
+def print_pretty
+	p "Don't forget these items! : "
+	$grocery_list.each {|item, quantity|
+	puts "You need #{quantity} #{item}"}
+end
 create_list("carrots apples oranges")
+add_item("tomatoes", 5)
+remove_item("potatoes")
+update_quantity("carrots", 3)
+print_pretty
 

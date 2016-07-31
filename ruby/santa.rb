@@ -25,17 +25,30 @@ class Santa
 		p @age
 	end
 	def get_mad_at(reindeer_name)
+		i = @reindeer_ranking.index(reindeer_name)
+		@reindeer_ranking.insert(-1,@reindeer_ranking.delete_at(i))
 
 	end
 	def gender=(new_gender)
 		@gender = new_gender
 	end
+	def age
+		@age
+	end
+	def ethnicity
+		@ethnicity
+	end
 
 end
 
 #driver code to test class methods
+
+nick = Santa.new("cis", "asian")
+nick.gender = "male"
+p nick.ethnicity
+p nick.age
+p nick.get_mad_at("Rudolph")
 '''
-nick = Santa.new
 nick.speak
 nick.eat_milk_and_cookies("chocolate chip")
 '''

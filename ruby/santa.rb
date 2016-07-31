@@ -1,6 +1,6 @@
 class Santa
-attr_accessor :gender
-attr_reader :age :ethnicity
+attr_accessor :gender, :age
+attr_reader :ethnicity
 
 	#prints message when new isntance of santa
 	#is created
@@ -45,17 +45,17 @@ attr_reader :age :ethnicity
 end
 
 #driver code to test class methods
-
+'''
 nick = Santa.new("cis", "asian")
 nick.gender = "male"
 p nick.ethnicity
 p nick.age
 p nick.get_mad_at("Rudolph")
-'''
 nick.speak
 nick.eat_milk_and_cookies("chocolate chip")
 '''
-'''
+
+
 # driver code to create diverse santas
 #empty array created to log santas into
 santas = []
@@ -63,14 +63,13 @@ santas = []
 ran_gender = ["gender fluid", "intersex", "genderqueer", "trans woman", "other"]
 ran_ethnicity = ["white", "black", "chinese", "korean", "other"]
 
-eric = Santa.new("cis", "asian")
-eric.celebrate_birthday
 
 #loop that creates a new instance of santa for every type of
 #ethnicity provided in ran_ethnicity array
 
-ran_ethnicity.length.times do |i|
-	santas << Santa.new( ran_gender[i], ran_ethnicity[i] )
-	p santas.to_ary
+#creates 30 instances of santa
+30.times do |i|
+	santa = Santa.new(ran_gender.sample, ran_ethnicity.sample)
+	santa.age = rand(140)
+	p santa
 end
-'''

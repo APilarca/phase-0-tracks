@@ -5,7 +5,7 @@ class Game
 		@guess_count = 0
 		@game_end = false
 		@guessed_letters = [ ]
-		@display = (@word.length).times.collect {"_"}.join(' ')
+		@display = (@word.length-2).times.collect {"_"}.join(' ')
 	end
 		
 	def guesses
@@ -20,8 +20,6 @@ class Game
 
 	def guess_tracker(letter)
 		arr = @word.split("")
-		arr.delete_at(0).delete_at(-1)
-		p arr
 		if @guessed_letters.include?(letter) == true
 			@guess_count
 			puts "You already guessed that!"
@@ -34,9 +32,8 @@ class Game
 			p @display
 		else
 			num = arr.index(letter)
-			@display = @display.split
 			@display[num] = letter
-			p @display.join(' ')
+			p @display
 		end
 	end
 
@@ -44,7 +41,7 @@ class Game
 		if guess_count == 0
 			puts "Aw, poor player ran out of guesses"
 			@game_end = true
-		elsif @display.delete(' ') == @word_to_guess
+		elsif @display.delete(' ') == @word
 			puts "Congratulations!!!"
 			@game_end = true
 		else
@@ -71,4 +68,3 @@ while new_game.game_end == false
 end
 
 puts "Thank you for playing!!!"
-

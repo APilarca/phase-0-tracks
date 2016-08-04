@@ -29,3 +29,12 @@ function Car(color, numberOfDoors, sunRoof) {
   this.honk = function() {console.log("Honk!");
                          };
 }
+var carOne = new Car("red", 2, true);
+console.log(carOne);
+carOne.honk();
+
+var carTwo = new Car("blue", 4, false);
+console.log(carTwo);
+
+var carThree = new Car("purple", 2, true);
+console.log(carThree)

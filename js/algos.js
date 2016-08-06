@@ -10,8 +10,14 @@ function longer(array) {
 	console.log(longest);
 }
 
-var words = ["hat", "mouse", "very long word", "shorter", "this should be the longest"];
+function compare(obj1, obj2) {
+	
+}
 
-longer(words);
 
-longer(["ahts", "and", "cats", "obviously the longest", "short", "obviously the longestsss"]);
+// var words = ["hat", "mouse", "very long word", "shorter", "this should be the longest"];
+
+// longer(words);
+
+// longer(["ahts", "and", "cats", "obviously the longest", "short", "obviously the longestsss"]);
+

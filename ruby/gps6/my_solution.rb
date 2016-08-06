@@ -4,25 +4,28 @@
 # We spent [#] hours on this challenge.
 
 # EXPLANATION OF require_relative
-#
-#
+# require relative allows you to access files in the current directory
+# no absolute paths that can be affected with moving.
+# require has pre defined paths to seaerch
 require_relative 'state_data'
 
 class VirusPredictor
-
+  #for every new instance created will store data given for each instance
+  #variable
   def initialize(state_of_origin, population_density, population)
     @state = state_of_origin
     @population = population
     @population_density = population_density
   end
-
+  #calls private methods within class
   def virus_effects
     predicted_deaths(@population_density, @population, @state)
     speed_of_spread(@population_density, @state)
   end
 
   private
-
+  #following methods cannot be called because they are private
+  #predicts deaths based on population density
   def predicted_deaths(population_density, population, state)
     # predicted deaths is solely based on population density
     if @population_density >= 200
@@ -40,7 +43,7 @@ class VirusPredictor
     print "#{@state} will lose #{number_of_deaths} people in this outbreak"
 
   end
-
+  #method calculates how quickly the virus will spread
   def speed_of_spread(population_density, state) #in months
     # We are still perfecting our formula here. The speed is also affected
     # by additional factors we haven't added into this functionality.

@@ -43,7 +43,7 @@ class VirusPredictor
 
     multiplier = 0
     
-  if @population_density >= 200
+    if @population_density >= 200
      multiplier = 0.4
     elsif @population_density >= 150
       multiplier = 0.3
@@ -107,3 +107,20 @@ STATE_DATA.each {|go, value| VirusPredictor.new(go, STATE_DATA[go][:population_d
 
 #=======================================================================
 # Reflection Section
+# The differenc in the hashes shown is that one is declared with
+# the key first with a ricket symbol to show the values. The other
+# hash is using dot notation to declare keys and assign variables.
+
+# Require relative is used to reference another file within the 
+# same directory, require is used to access a specific path to a file
+# not necessarily in the same directory.
+
+# one way to iterate through a hash is to use the each method.
+# Another way to iterate throug a hash is to use one of the many
+# loops available.
+
+# When refactoring what stood out to me about the variables is that
+# every instance that is declared is already storing those variables
+# and once they are stored you can access them without reinputting them.
+
+# I most solidified how to work with hashes in this challenge.

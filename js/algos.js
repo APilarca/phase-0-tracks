@@ -21,3 +21,7 @@ function compare(obj1, obj2) {
 
 // longer(["ahts", "and", "cats", "obviously the longest", "short", "obviously the longestsss"]);
 
+var first = {name: "A", age: 12};
+var second = {name: "B", age: 12};
+
+compare(first, second);

@@ -1,3 +1,13 @@
+// first i will need to look through the array that is inputted
+// I will need to use the length of the array to itterate through
+// i will compare each word by comapring the first and then second
+// and taking the longest of the two, and then compare those to the
+// next string in the array.
+// I will continue to do this until the array is searched through
+// then return the word that was the longest.
+
+
+
 function longer(array) {
 	var longest = "";
 	for(i = 0; i < array.length; i++) {
@@ -35,7 +45,7 @@ function randData(length) {
 	for (var i = 0; i < length; i++) {
 		for (var x = 0; x < 10; x++) {
 			newString += alphabet.charAt(Math.floor(Math.random() *alphabet.length));
-			
+
 		}
 		newData[i] = newString;
 	}

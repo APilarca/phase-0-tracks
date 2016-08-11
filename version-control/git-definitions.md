@@ -11,3 +11,4 @@ A commit is when you save the code that you have into your repository. A good co
 * What is a merge conflict?
 A merge conflict is when you try to merge a new branch to the original, or master, but changes have been made to both branches.
 This is a change.
+Another change.

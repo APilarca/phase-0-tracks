@@ -31,19 +31,20 @@ def create_list_item(data)
 	new_item[:bag] = gets.chomp
 
 	data.execute("INSERT INTO list (name, fragile, bag) VALUES (?, ?, ?)", [new_item[:name], new_item[:fragile], new_item[:bag]])
+	puts "Would you like to enter another item?(Type done to finish)"
+	$answer = gets.chomp
 end
 
 
 puts "Hello! Going on a trip? Create your travel list here!"
 create_list_item(data)
-puts "Would you like to add another item? Type done to finish"
-answer = gets.chomp
-if answer == "done"
-	puts"Thank you for using our services"
-	listed = data.execute("SELECT * FROM list")
-	listed.each do |item|
-		puts "#{item['name']} is fragile = #{item['fragile']} and is packed in #{item['bag']}"
-	end
-else
+
+while $answer != "done"
 	create_list_item(data)
+end
+	
+puts"Thank you for using our services"
+listed = data.execute("SELECT * FROM list")
+listed.each do |item|
+	puts "#{item['name']} is fragile = #{item['fragile']} and is packed in #{item['bag']}"
 end

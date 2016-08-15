@@ -1,0 +1,34 @@
+SELECT * FROM travel_items;
+1|clothes|false|large|2
+2|laptop|true|large|1
+3|toiletries|true|small|2
+4|phone charger|false|small|1
+
+UPDATE travel_items SET fragile="true" WHERE name="laptop";
+
+SELECT * FROM travel_items, bags WHERE travel_items.bag_id = bags.id;
+1|clothes|false|large|2|2|luggage
+2|laptop|true|large|1|1|Carry On
+3|toiletries|true|small|2|2|luggage
+4|phone charger|false|small|1|1|Carry On
+
+SELECT travel_items.name, bags.name FROM travel_items JOIN bags ON travel_items.bag_id = bags.id;
+clothes|luggage
+laptop|Carry On
+toiletries|luggage
+phone charger|Carry On
+
+ DELETE FROM travel_items WHERE name="toiletries";
+
+ SELECT bag_id, travel_items.name, bags.name FROM travel_items CROSS JOIN bags;
+2|clothes|Carry On
+2|clothes|luggage
+1|laptop|Carry On
+1|laptop|luggage
+1|phone charger|Carry On
+1|phone charger|luggage
+
+SELECT bag_id, bags.name, travel_items.fragile FROM travel_items LEFT OUTER JOIN bags ON bag_id = bags.id;
+2|luggage|false
+1|Carry On|true
+1|Carry On|false

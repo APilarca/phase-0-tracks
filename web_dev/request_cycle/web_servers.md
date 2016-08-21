@@ -1,0 +1,3 @@
+Main philosophies of linux are to do execute programs in the smallest commands possible, while doing each thing well. Portability is also important, being able to move your system. To never rewrite code that has been written.
+A virtual private server is a server that is hosted online that you have access to that has it's own operating system. Advantages of a VPS are that you have more control over it, and it is also cheaper.
+It is a bad idea to log in as a root user because you can bypass any security features that were put in place to protect the system.

@@ -1,0 +1,3 @@
+Some common http status codes are 200 which means evrything works, 404 which means the page was not fouhnd, 500 which means there was an error.
+The difference between a get request and a post request is a get request has the query string in the url, and remains in hsitory, where you can bookmark. A post request has the query string sent in http message body, and isn't left in the browser history, cannot be bookmarked.
+A cookie is a piece of data sent from the site you're visiting and stored in your web browser.

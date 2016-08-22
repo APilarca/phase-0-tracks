@@ -1,0 +1,2 @@
+I would first go to google and try to understand exactly what jquery was. After that I would try to understand how to execute my new knowledge. Breaks are important to give yourself time to really think about and prcoess the things you just learned.
+It seemed best for me to make sure if I didn't completely understand something I spent a little more time on it.
